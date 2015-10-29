@@ -245,8 +245,12 @@ int main(int argc, char *argv[])
     kmArr[199] =  12.372681;
     kmArr[200] =  12.432581;
 
-    double miles;
-    double tolerance = atof(argv[2]);
+    double miles = 1.0;
+    double tolerance = 0.0;
+    if(argc > 2)
+    {
+        tolerance = atof(argv[2]);
+    }
     int bad = 0;
 
     if(argc > 1)
